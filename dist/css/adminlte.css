@@ -24,7 +24,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #007bff;
+  --primary: whitesmoke
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -4359,8 +4359,8 @@ input[type="button"].btn-block {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #007bff;
+  color: rgb(47, 43, 43);
+  background-color: #fefefe;
 }
 
 .nav-fill > .nav-link,
@@ -12845,8 +12845,8 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 }
 
 [class*="sidebar-light-"] .nav-treeview > .nav-item > .nav-link.active, [class*="sidebar-light-"] .nav-treeview > .nav-item > .nav-link.active:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #212529;
+  background-color: whitesmoke;
+  color: black;
 }
 
 [class*="sidebar-light-"] .nav-treeview > .nav-item > .nav-link:hover {

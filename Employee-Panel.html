@@ -5,65 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Employee Timesheet</title>
 
+  <link rel="stylesheet" href="page.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="shortcut icon" href="favicon.png">
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"> -->
 
-  <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css"> -->
+  <!-- <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"> -->
   <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css"> -->
   <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css"> -->
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"> -->
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css"> -->
   <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <!-- <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css"> -->
 
   <link rel="stylesheet" href="src/mini-event-calendar.min.css">
 </head>
+
+
+
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
 
-  <!-- Preloader -->
  
-  <!-- Navbar -->
- 
-  <!-- /.navbar -->
-
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar elevation-4" style="background-color: rgb(62, 90, 160); color: aliceblue;">
+  <aside class="main-sidebar elevation-4" style="background-color: #e4e9ed; ">
     <!-- Brand Logo -->
-    <!-- <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light"></span>
-    </a> -->
+     <!-- Brand Logo -->
+     <a href="index3.html" class="brand-link">
+      <span></span>
+      <b><span class="brand-text font-weight-light" style="color: rgb(29, 27, 27); margin-left: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Employee Timesheet</span></b>
+      <hr></a>
+    
     
     <!-- Sidebar -->
-    <div class="sidebar" style="color: white;">
+    <div class="sidebar" >
       <!-- Sidebar user panel (optional) -->
       
      
       
       <!-- Sidebar Menu -->
-      <nav class="mt-2" style="color: white;">
+      <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
 
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-user-friends"></i>
-              <p style="font-size:18px;">
+            <a href="/Employee-Panel.html" class="nav-link active">
+              <i class="nav-icon fas fa-user-friends" style="color: rgb(255, 255, 255);"></i>
+              <p style="font-size:18px; color: rgb(255, 255, 255);" id="sidebar-element">
                 Employee Panel
                 <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
@@ -74,8 +78,8 @@
           <li class="nav-item">
 
             <a href="/Admin-Panel.html" class="nav-link" style="color:white;">
-              <i class="nav-icon fas fa-user-alt"></i>
-              <p style="font-size:18px;">
+              <i class="nav-icon fas fa-user-alt" style="color: rgb(66, 103, 199);"></i>
+              <p style="font-size:18px;color: rgb(66, 103, 199);">
                 Admin Panel
                 <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
@@ -90,10 +94,7 @@
     <!-- /.sidebar -->
   </aside>
 
-  <!-- Content Wrapper. Contains page content -->
-  <header>
-
-  </header>
+ 
  
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -107,10 +108,10 @@
         <div class="row">
           <div class="col-6">
 
-            <div class="d-flex justify-content-between">
-              <input type="submit" class=" btn btn-info" value="Release" style="width: 20%; font-size: 18px;">
-              <input type="submit" class="btn btn-info" value="Save"  style="width: 25%; font-size: 18px;">
-              <input type="submit" class="btn btn-info" value="Close"  style="width: 25%; font-size: 18px;">
+            <div class="d-flex">
+              <input type="submit" class=" btn btn-info btn-sm" value="Release" style="width: 18%; font-size: 18px; margin-right: 10px;">
+              <input type="submit" class="btn btn-info btn-sm" value="Save"  style="width: 18%; font-size: 18px; margin-right: 10px;">
+              <input type="submit" class="btn btn-info btn-sm" value="Close"  style="width: 18%; font-size: 18px; margin-right: 10px;">
            
           </div>
         
@@ -120,30 +121,12 @@
     </div>
     <hr>
 
-    <!-- Main content -->
     <!-- <section class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-3"> </div>
           <section class="col-6 connectedSortable style="height: 2% !important;">
-            <div id="wrapper">
-              <div>
-                <div id="calendar"></div>
-              </div>
-            </div>
-          </section>
-          <section class="col-3"> </section>
-        </div>
-      </div>
-    </section> -->
-
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Main row -->
-        <div class="row">
-          <div class="col-3"> </div>
-          <section class="col-6 connectedSortable style="height: 2% !important;">
-            <div id="wrapper">
+            <div id="wrapper calender-wrapper">
               <div>
                 <div id="calendar" style="border-radius:5px; margin-bottom:1rem;"></div>
               </div>
@@ -152,7 +135,13 @@
           <section class="col-3"> </section>
         </div>
       </div>
-    </section>
+    </section> -->
+
+    <main>
+      <div class="calendar-wrapper" id="calendar-wrapper"></div>
+      <div id="editor" style="display: none;"></div>
+    </main>
+    <!-- <div id="content"></div> -->
 
     <div class="card">
       <div class="card-header">
@@ -170,19 +159,20 @@
         </div>
       </div>
       <!-- /.card-header -->
-      <div class="card-body">
+      <div class="card-body" style="width: auto;">
         <table id="example1" class="table table-bordered table-striped">
           <thead>
-          <tr>
-            <th>Task</th>
-            <th>Activity</th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
+          <tr style="text-align: center;">
+            <th style="vertical-align: text-top;">Task</th>
+            <th style="vertical-align: text-top;">Activity</th>
+            <th>Sunday <br>(<span id="sun"></span>)</th>
+            <th>Monday <br>(<span id="mon"></span>)</th>
+            <th>Tuesday <br>(<span id="tue"></span>)</th>
+            <th>Wednesday <br>(<span id="wed"></span>)</th>
+            <th>Thursday <br>(<span id="thur"></span>)</th>
+            <th>Friday <br>(<span id="fri"></span>)</th>
+            <th>Saturday <br>(<span id="sat"></span>)</th>
+            
           </tr>
           </thead>
           <tbody>
@@ -192,9 +182,9 @@
               <div class="form-group">
                 
                 <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">Task</option>
-                  <option>Task1</option>
-                  
+                  <option selected="selected" style="font-size: 12px;">Task</option>
+                  <option value="">IDN not released for transactions</option>
+                  <option value="">Reg: POS Inconsistent Transaction</option>
                 </select>
               </div>
 
@@ -203,10 +193,11 @@
               <div class="form-group">
                 
                 <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">Activity</option>
-                  <option>Activity1</option>
-                  
+                  <option selected="selected" style="font-size: 7px;">Activity</option>
+                  <option value="">Live testing</option>
+                  <option value="">In Development</option>
                 </select>
+
               </div>
             </td>
 
@@ -214,10 +205,23 @@
 
               <div class="form-group">
                 
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">0:00</option>
+               <input type="time" class="form-control">
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <!-- <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">0:00</option> -->
+
+                  <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="23">:
+                    <input class="form-control" type="number" min="0" max="59" placeholder="00">
+                  </div>
                  
-                </select>
               </div>
 
             </td>
@@ -226,10 +230,11 @@
 
               <div class="form-group">
                 
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">0:00</option>
-                 
-                </select>
+                <div style=" display: inline-flex; width: 125px;">
+                  <input class="form-control" type="number" min="0" max="23" placeholder="23">:
+                  <input class="form-control" type="number" min="0" max="59" placeholder="00">
+                </div>
+
               </div>
 
             </td>
@@ -238,10 +243,11 @@
 
               <div class="form-group">
                 
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">0:00</option>
-                 
-                </select>
+                <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="23">:
+                    <input class="form-control" type="number" min="0" max="59" placeholder="00">
+                  </div>
+
               </div>
 
             </td>
@@ -250,10 +256,11 @@
 
               <div class="form-group">
                 
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">0:00</option>
-                 
-                </select>
+                 <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="23">:
+                    <input class="form-control" type="number" min="0" max="59" placeholder="00">
+                  </div>
+
               </div>
 
             </td>
@@ -262,10 +269,11 @@
 
               <div class="form-group">
                 
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">0:00</option>
-                 
-                </select>
+                 <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="23">:
+                    <input class="form-control" type="number" min="0" max="59" placeholder="00">
+                  </div>
+
               </div>
 
             </td>
@@ -274,22 +282,11 @@
 
               <div class="form-group">
                 
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">0:00</option>
-                 
-                </select>
-              </div>
+                 <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="23">:
+                    <input class="form-control" type="number" min="0" max="59" placeholder="00">
+                  </div>
 
-            </td>
-
-            <td>
-
-              <div class="form-group">
-                
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">0:00</option>
-                 
-                </select>
               </div>
 
             </td>
@@ -300,6 +297,12 @@
         </table>
       </div>
       <!-- /.card-body -->
+    </div>
+
+    <div class="row">
+
+      
+
     </div>
 
     <div class="row">
@@ -427,6 +430,7 @@
     </div>
  
 </div>
+</div>
 
 
 
@@ -437,57 +441,202 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
+<!-- <script>
   $(function(){
     $("#datepicker")
   })
-</script>
+</script> -->
 <!-- Bootstrap 4 -->
+<script src="js/adminlte.js"></script>
+<script src="js/timepicker.min.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<script src="plugins/select2/js/select2.full.min.js"></script>
-<script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+<!-- <script src="plugins/select2/js/select2.full.min.js"></script>
+<script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script> -->
 
 
 <!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- <script src="plugins/chart.js/Chart.min.js"></script> -->
 <!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
+<!-- <script src="plugins/sparklines/sparkline.js"></script> -->
 <!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<!-- <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
 <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<script src="plugins/inputmask/jquery.inputmask.min.js"></script>
+<script src="plugins/inputmask/jquery.inputmask.min.js"></script> -->
 
 <!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- <script src="plugins/jquery-knob/jquery.knob.min.js"></script> -->
 <!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- <!-- <script src="plugins/moment/moment.min.js"></script> -->
+<!-- <script src="plugins/daterangepicker/daterangepicker.js"></script> -->
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script> -->
 <!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- <script src="plugins/summernote/summernote-bs4.min.js"></script> -->
 <!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
+
+
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
 <script src="dist/js/pages/dashboard.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="src/mini-event-calendar.min.js"></script>
-    <script>
-        // All dates should be provided in timestamps
-        //  var sampleEvents = [
-            // ];
-        $(document).ready(function(){
-            $("#calendar").MEC({
-                //events: sampleEvents
-            });
-        });
-    </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="calendar.min.js"></script>
+<!-- <script src="calendar.js"></script> -->
+<script
+  src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
+<script type="text/javascript">
+
+document.querySelectorAll('input[type=number]')
+  .forEach(e => e.oninput = () => {
+    // Always 2 digits
+    if (e.value.length >= 2) e.value = e.value.slice(0, 2);
+    // 0 on the left (doesn't work on FF)
+    if (e.value.length === 1) e.value = '0' + e.value;
+    // Avoiding letters on FF
+    if (!e.value) e.value = '00';
+  });
+
+
+  var config = `
+function selectDate(date) {
+$('#calendar-wrapper').updateCalendarOptions({
+date: date
+});
+ 
+let currentDateTime = calendar.getSelectedDate();
+
+
+showCurrentDateTime(currentDateTime);
+
+}
+
+var defaultConfig = {
+weekDayLength: 1,
+date: new Date(),
+onClickDate: selectDate,
+showYearDropdown: true,
+startOnMonday: false,
+};
+
+var calendar = $('#calendar-wrapper').calendar(defaultConfig);
+
+`;
+
+Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+}
+
+// console.log(date.addDays(5));
+
+const showCurrentDateTime = function (currentDateTime){
+
+//   var curr = currentDateTime; // get current date
+//   var first = curr.getDate();// - curr.getDay(); // First day is the day of the month - the day of the week
+//   var month = curr.getMonth();
+//  alert(curr);
+
+ var curr = currentDateTime; // get current date
+var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
+var last = first + 6; // last day is the first day + 6
+
+var lastday = new Date(curr.setDate(last)).toUTCString();
+var firstday = new Date(curr.setDate(first)).toUTCString();
+
+var d = new Date(curr.getYear(),curr.getMonth(),curr.getDate());
+console.log(curr);
+
+var dateString = curr.toString().substring(4,15);
+const dateArray = dateString.split(" ");
+console.log(dateArray);
+
+var newDate = new Date (dateArray[2],5,dateArray[1]);
+console.log(newDate);
+console.log("Added Days ",newDate.addDays(2));
+
+
+// if(curr.getDay()===0)
+// {   
+//   var firstday = new Date(curr.setDate(first+1));
+//   var secondDay = new Date(curr.setDate((first+2)));
+//   var thirdDay = new Date(curr.setDate(first+3));
+//   var fourthDay = new Date(curr.setDate(first+4));
+//   var fifthDay = new Date(curr.setDate(first+5));
+//   var sixthDay = new Date(curr.setDate(first+6));
+//   var lastDay = new Date(curr.setDate(first+7));
+//    $("#sun").text(firstday.toUTCString().substring(5,11));
+//     $("#mon").text(secondDay.toUTCString().substring(5,11));
+//     $("#tue").text(thirdDay.toUTCString().substring(5,11));
+//     $("#wed").text(fourthDay.toUTCString().substring(5,11));
+//     $("#thur").text(fifthDay.toUTCString().substring(5,11));
+//     $("#fri").text(sixthDay.toUTCString().substring(5,11));
+//     $("#sat").text(lastDay.toUTCString().substring(5,11));
+//    ;
+// }
+
+
+
+ // console.log("Curr",curr, "Current Date",curr.getDate(),"Current Day",curr.getDay()) ;
+ 
+  var last = first + 6; // last day is the first day + 6
+  const shortMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  var firstday = new Date(curr.setDate(first)).toUTCString();
+  var lastday = new Date(curr.setDate(last)).toUTCString();
+  var second = first + 1;
+  var firstDay = new Date(curr.setDate(first)).toUTCString();
+  var secondDay = new Date(curr.setDate((second))).toUTCString();
+  var thirdDay = new Date(curr.setDate(first+2)).toUTCString();
+  var fourthDay = new Date(curr.setDate(first+3)).toUTCString();
+  var fifthDay = new Date(curr.setDate(first+4)).toUTCString();
+  var sixthDay = new Date(curr.setDate(first+5)).toUTCString();
+  var lastDay = new Date(curr.setDate(last)).toUTCString();
+
+  // console.log("Month",shortMonths[month]) 
+
+  // console.log(Date(curr.setDate(first)).toUTCString().substring(5,11));
+ // console.log(firstday,secondDay,lastday);
+  // console.log(firstday.substring(5,11))
+
+  const num = [0,1,2,3,4,5,6];
+
+    $("#sun").text((firstDay.substring(5,11)));
+    $("#mon").text( (secondDay.substring(5,11)));
+    $("#tue").text( (thirdDay.substring(5,11)));
+    $("#wed").text( (fourthDay.substring(5,11)));
+    $("#thur").text( (fifthDay.substring(5,11)));
+    $("#fri").text( (sixthDay.substring(5,11)));
+    $("#sat").text( (lastDay.substring(5,11)));
+
+  // num.forEach(function(i,val){
+  //   var day = curr.getDay()+i;
+
+    
+
+  //   })
+}
+  
+  const flask = new CodeFlask('#editor', { 
+    language: 'js', 
+    lineNumbers: true 
+  });
+  flask.updateCode(config);
+  flask.onUpdate((code) => {
+    try {
+      eval(code);
+    } catch(e) {}
+  });
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 
 </body>
 </html>

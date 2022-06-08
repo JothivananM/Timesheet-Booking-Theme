@@ -5,59 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Employee Timesheet</title>
 
+  <link rel="stylesheet" href="page.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="shortcut icon" href="favicon.png">
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"> -->
+
+  <!-- <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css"> -->
+  <!-- <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"> -->
   <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css"> -->
   <!-- JQVMap -->
   <!-- <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css"> -->
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"> -->
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css"> -->
   <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <!-- <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css"> -->
+
+  <link rel="stylesheet" href="src/mini-event-calendar.min.css">
+
+
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
 
-  <!-- Preloader -->
-   <!-- Navbar -->
  
-  <!-- /.navbar -->
-
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar elevation-4" style="background-color: rgb(62, 90, 160); color: aliceblue;">
+  <aside class="main-sidebar elevation-4" style="background-color: #e4e9ed; ">
     <!-- Brand Logo -->
-    <!-- <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light"></span>
-    </a> -->
-
+     <!-- Brand Logo -->
+     <a href="index3.html" class="brand-link">
+      <span></span>
+      <b><span class="brand-text font-weight-light" style="color: rgb(29, 27, 27); margin-left: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Employee Timesheet</span></b>
+      <hr></a>
+    
+    
     <!-- Sidebar -->
-    <div class="sidebar" style="color: white;">
+    <div class="sidebar" >
       <!-- Sidebar user panel (optional) -->
       
-
+     
       
       <!-- Sidebar Menu -->
-      <nav class="mt-2" style="color: white;">
+      <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
 
-            <a href="/Employee-Panel.html" class="nav-link" style="color:white;">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
+            <a href="/Employee-Panel.html" class="nav-link">
+              <i class="nav-icon fas fa-user-friends" style="color: rgb(66, 103, 199);"></i>
+              <p style="font-size:18px; color: rgb(66, 103, 199);;" id="sidebar-element">
                 Employee Panel
                 <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
@@ -67,9 +77,9 @@
 
           <li class="nav-item">
 
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
+            <a href="/Admin-Panel.html" class="nav-link active">
+              <i class="nav-icon fas fa-user-alt" style="color: rgb(255, 255, 255);"></i>
+              <p style="font-size:18px;color: rgb(255, 255, 255);">
                 Admin Panel
                 <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
@@ -84,29 +94,321 @@
     <!-- /.sidebar -->
   </aside>
 
-  <!-- Content Wrapper. Contains page content -->
+ 
+ 
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    
+   
+      <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars" style="font-size: 20px;width: 50%;"></i></a>
+   
     <!-- /.content-header -->
 
-    <!-- Main content -->
-    <section class="content">
-      
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <!-- <footer class="main-footer">
-    <strong>Copyright &copy; 2022 <a href="#">link</a></strong>
-    All rights reserved.
-   
-  </footer> -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6">
 
-  <!-- Control Sidebar -->
+            <div class="d-flex justify-content-between">
+              <!-- <input type="submit" class=" btn btn-info" value="Release" style="width: 20%; font-size: 18px;"> -->
+              <a href="#" class="m-1" style="font-size:20px; color: #343a40;">Employee / Service Agent</a>
+              <!-- <input type="submit" class="btn btn-info " value="Save"  style="width: 25%; font-size: 18px;"> -->
+              <div class="form-group col-4">
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">Employee Name</option>
+                  <option>John</option>
+                  <option>Mick</option>
+                </select>
+              </div>
+              <input type="submit" class="btn btn-info" value="View"  style="width: 20%; height: 20%; font-size: 18px;">
+           
+          </div>
+        
+        </div>
+       
+      </div><!-- /.container-fluid -->
+    </div>
+    <hr>
+
+    <main>
+      <div class="calendar-wrapper" id="calendar-wrapper"></div>
+      <div id="editor" style="display: none;"></div>
+    </main>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <div class="row">
+            <div class="d-flex justify-content-around">
+              <div>
+                <button type="submit" class="btn btn-success" style="margin-right:10px;">Upload</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+          <thead>
+          <tr>
+            <th>Task</th>
+            <th>Activity</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">Task</option>
+                  <option selected="selected">Task</option>
+                  <option value="">IDN not released for receipted transactions</option>
+                  <option value="">Reg: POS Inconsistent Transaction</option>                  
+                </select>
+              </div>
+
+            </td>
+            <td>
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">Activity</option>
+                  <option value="">Live testing</option>
+                  <option value="">In Development</option>               
+                </select>
+              </div>
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">0:00</option>
+                 
+                </select>
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">0:00</option>
+                 
+                </select>
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">0:00</option>
+                 
+                </select>
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">0:00</option>
+                 
+                </select>
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">0:00</option>
+                 
+                </select>
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">0:00</option>
+                 
+                </select>
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">0:00</option>
+                 
+                </select>
+              </div>
+
+            </td>
+            
+          </tr>
+          
+         
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+
+    <div class="row">
+
+      <div class="card card-success col-6">
+
+        <div class="card card-header" style="background-color: white;box-shadow: none;">
+          <input type="button" value="Action" class="btn btn-secondary p-1 col-3" style="width: 25%; font-size: 18px;">
+        </div>
+
+        <div class="card-body">
+
+          <div class="row">
+
+            <div class="col-5 p-1">
+              <label>Hours :</label>
+            </div>
+
+            <div class="col-7 p-1">
+              <input type="text" class="form-control" placeholder="">
+            </div>
+           
+          </div>
+
+          <div class="row">
+
+            <div class="col-5 p-1">
+              <label>Status :</label>
+            </div>
+
+            <div class="col-7 p-1">
+              <input type="text" class="form-control" placeholder="">
+            </div>
+           
+          </div>
+
+          <div class="row">
+
+            <div class="col-5 p-1">
+              <label>Approver :</label>
+            </div>
+
+            <div class="col-7 p-1">
+              <input type="text" class="form-control" placeholder="">
+            </div>
+           
+          </div>
+
+          <div class="row">
+
+            <div class="col-5 p-1">
+              <label>Premium Pay :</label>
+            </div>
+
+            <div class="col-7 p-1">
+              <input type="text" class="form-control" placeholder="">
+            </div>
+           
+          </div>
+
+          <div class="row">
+
+            <div class="col-5 p-1">
+              <label>Start Time / End Time :</label>
+            </div>
+
+            <div class="col-7 p-1">
+              <input type="text" class="form-control" placeholder="">
+            </div>
+           
+          </div>
+
+          <div class="row">
+
+            <div class="col-5 p-1">
+              <label>Purchase Order :</label>
+            </div>
+
+            <div class="col-7 p-1">
+              <input type="text" class="form-control" placeholder="">
+            </div>
+           
+          </div>
+
+          <div class="row">
+
+            <div class="col-5 p-1">
+              <label>Remaining Quality :</label>
+            </div>
+
+            <div class="col-7 p-1">
+              <input type="text" class="form-control" placeholder="">
+            </div>
+           
+          </div>
+
+        </div>
+        <!-- /.card-body -->
+      </div>
+    
+      <div class="card card-primary col-6">
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form class="mt-3">
+          <div class="card-body">
+           
+            <div class="form-group">
+              <label for="exampleFormControlTextarea2">Work Description :</label>
+              <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea2">Internal Comments :</label>
+              <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="5"></textarea>
+            </div>
+
+          </div>
+          <!-- /.card-body -->
+
+         
+        </form>
+      </div>
+
+    <!-- /.content -->
+    </div>
  
-  <!-- /.control-sidebar -->
 </div>
+</div>
+
+
+
 <!-- ./wrapper -->
 
 <!-- jQuery -->
@@ -114,34 +416,88 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
+<!-- <script>
+  $(function(){
+    $("#datepicker")
+  })
+</script> -->
 <!-- Bootstrap 4 -->
+<script src="js/adminlte.js"></script>
+<script src="js/timepicker.min.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- <script src="plugins/select2/js/select2.full.min.js"></script>
+<script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script> -->
+
+
 <!-- ChartJS -->
 <!-- <script src="plugins/chart.js/Chart.min.js"></script> -->
 <!-- Sparkline -->
 <!-- <script src="plugins/sparklines/sparkline.js"></script> -->
 <!-- JQVMap -->
-<!-- <script src="plugins/jqvmap/jquery.vmap.min.js"></script> -->
-<!-- <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script> -->
+<!-- <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="plugins/inputmask/jquery.inputmask.min.js"></script> -->
+
 <!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- <script src="plugins/jquery-knob/jquery.knob.min.js"></script> -->
 <!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- <script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script> -->
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script> -->
 <!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- <script src="plugins/summernote/summernote-bs4.min.js"></script> -->
 <!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
+<!-- <script src="dist/js/adminlte.js"></script> -->
 <!-- AdminLTE for demo purposes -->
+<script src="dist/js/adminlte.js"></script>
+
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
 <script src="dist/js/pages/dashboard.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="calendar.min.js"></script>
+<!-- <script src="calendar.js"></script> -->
+<script
+  src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
+<script type="text/javascript">
+  var config = `
+function selectDate(date) {
+$('#calendar-wrapper').updateCalendarOptions({
+date: date
+});
+console.log(calendar.getSelectedDate());
+}
+
+var defaultConfig = {
+weekDayLength: 1,
+date: '08/05/2021',
+onClickDate: selectDate,
+showYearDropdown: true,
+startOnMonday: false,
+};
+
+var calendar = $('#calendar-wrapper').calendar(defaultConfig);
+console.log(calendar.getSelectedDate());
+`;
+  
+  const flask = new CodeFlask('#editor', { 
+    language: 'js', 
+    lineNumbers: true 
+  });
+  flask.updateCode(config);
+  flask.onUpdate((code) => {
+    try {
+      eval(code);
+    } catch(e) {}
+  });
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 </html>
