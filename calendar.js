@@ -190,7 +190,7 @@
     return (
       "" +
       '<div class="special-buttons">' +
-      '<button class="today-button btn btn-primary">' +
+      '<button class="today-button">' +
       settings.todayButtonContent +
       "</button>" +
       "</div>"

@@ -14,25 +14,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <!-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
-  <!-- Tempusdominus Bootstrap 4 -->
-  <!-- <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"> -->
-
-  <!-- <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css"> -->
-  <!-- <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"> -->
-  <!-- iCheck -->
-  <!-- <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css"> -->
-  <!-- JQVMap -->
-  <!-- <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css"> -->
+  
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <!-- <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"> -->
-  <!-- Daterange picker -->
-  <!-- <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css"> -->
-  <!-- summernote -->
-  <!-- <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css"> -->
+  
 
   <link rel="stylesheet" href="src/mini-event-calendar.min.css">
 </head>
@@ -52,10 +37,12 @@
   <aside class="main-sidebar elevation-4" style="background-color: #325579; ">
     <!-- Brand Logo -->
      <!-- Brand Logo -->
-     <a href="index3.html" class="brand-link">
-      <span></span>
-      <b><span class="brand-text font-weight-light" style="color: rgb(253, 242, 242); margin-left: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Employee Timesheet</span></b>
-      <hr style="background-color: whitesmoke;"></a>
+     <div class="brand-link">
+      <img src="../Timesheet-Booking-Theme/dist/img/timesheet-icon.png" alt="AdminLTE Logo" class="brand-image">
+      <!-- <span class="brand-text font-weight-light">AdminLTE 3</span> -->
+      <span class="brand-text font-weight-light" style="color: rgb(253, 242, 242); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Employee Timesheet</span></b>
+      <hr style="background-color: whitesmoke;">
+     </div>
     
     
     <!-- Sidebar -->
@@ -69,7 +56,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
 
-            <a href="Employee-Panel.html" class="nav-link active">
+            <a href="https://employee-timesheet.s3.amazonaws.com/Design/Employee-Panel.html" class="nav-link active">
               <i class="nav-icon fas fa-user-friends" style="color: rgb(255, 255, 255);"></i>
               <p style="font-size:18px; color: rgb(255, 255, 255);;" id="sidebar-element">
                 Employee Panel
@@ -81,7 +68,7 @@
 
           <li class="nav-item">
 
-            <a href="Admin-Panel.html" class="nav-link">
+            <a href="https://employee-timesheet.s3.amazonaws.com/Design/Admin-Panel.html" class="nav-link">
               <i class="nav-icon fas fa-user-alt" style="color: rgb(255, 255, 255);"></i>
               <p style="font-size:18px;color: rgb(255, 255, 255);">
                 Admin Panel
@@ -123,21 +110,6 @@
     </div>
     <hr>
 
-    <!-- <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-3"> </div>
-          <section class="col-6 connectedSortable style="height: 2% !important;">
-            <div id="wrapper calender-wrapper">
-              <div>
-                <div id="calendar" style="border-radius:5px; margin-bottom:1rem;"></div>
-              </div>
-            </div>
-          </section>
-          <section class="col-3"> </section>
-        </div>
-      </div>
-    </section> -->
 
     <main>
       <div class="calendar-wrapper" id="calendar-wrapper"></div>
@@ -183,10 +155,10 @@
 
               <div class="form-group">
                 
-                <select class="form-control select2" style="width: 100px;">
-                  <option style="font-size: 12px;">Task</option>
-                  <option value="">IDN not released for transactions</option>
-                  <option value="">Reg: POS Inconsistent Transaction</option>
+                <select class="form-control select2" style="width: auto;">
+                  <option disabled hidden>Task</option>
+                  <option value="">Interior</option>
+                  <option value="" selected>Plumbing</option>
                 </select>
               </div>
 
@@ -194,10 +166,253 @@
             <td>
               <div class="form-group">
                 
-                <select class="form-control select2" style="width: 100px;">
-                  <option style="font-size: 7px;">Activity</option>
-                  <option value="">Live testing</option>
-                  <option value="">In Development</option>
+                <select class="form-control select2" style="width: auto;">
+                  <option disabled hidden>Activity</option>
+                  <option value="">False ceiling</option>
+                  <option value="">Painting</option>
+                  <option value="" selected>kitchen plumbing</option>
+                </select>
+
+              </div>
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <div style=" display: inline-flex; width: 125px;">
+                  <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                  <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                </div>
+
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+              
+                  <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                    <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                  </div>
+                 
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <div style=" display: inline-flex; width: 125px;">
+                  <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                  <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                </div>
+
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                    <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                  </div>
+
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                 <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                    <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                  </div>
+
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                 <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                    <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                  </div>
+
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                 <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                    <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                  </div>
+
+              </div>
+
+            </td>
+            
+          </tr>
+
+          <!--2nd row-->
+          <tr>
+            <td>
+
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: auto;">
+                  <option disabled hidden>Task</option>
+                  <option value="" selected>Interior</option>
+                  <option value="">Plumbing</option>
+                </select>
+              </div>
+
+            </td>
+            <td>
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: auto;">
+                  <option disabled hidden>Activity</option>
+                  <option value="" selected>False ceiling</option>
+                  <option value="">Painting</option>
+                  <option value="">kitchen plumbing</option>
+                </select>
+
+              </div>
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <div style=" display: inline-flex; width: 125px;">
+                  <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                  <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                </div>
+
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+              
+                  <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                    <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                  </div>
+                 
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <div style=" display: inline-flex; width: 125px;">
+                  <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                  <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                </div>
+
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                    <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                  </div>
+
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                 <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                    <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                  </div>
+
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                 <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                    <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                  </div>
+
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="form-group">
+                
+                 <div style=" display: inline-flex; width: 125px;">
+                    <input class="form-control" type="number" min="0" max="23" placeholder="HH">
+                    <input class="form-control" type="number" min="0" max="59" placeholder="MM">
+                  </div>
+
+              </div>
+
+            </td>
+            
+          </tr>
+
+          <!--3rd Row-->
+          <tr>
+            <td>
+
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: auto;">
+                  <option selected disabled hidden>Task</option>
+                  <option value="">Interior</option>
+                  <option value="">Plumbing</option>
+                </select>
+              </div>
+
+            </td>
+            <td>
+              <div class="form-group">
+                
+                <select class="form-control select2" style="width: auto;">
+                  <option selected disabled hidden>Activity</option>
+                  <option value="">False ceiling</option>
+                  <option value="">Painting</option>
+                  <option value="">kitchen plumbing</option>
                 </select>
 
               </div>
@@ -438,42 +653,12 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<!-- <script>
-  $(function(){
-    $("#datepicker")
-  })
-</script> -->
-<!-- Bootstrap 4 -->
+
 <script src="js/adminlte.js"></script>
 <script src="js/timepicker.min.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- <script src="plugins/select2/js/select2.full.min.js"></script>
-<script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script> -->
 
-
-<!-- ChartJS -->
-<!-- <script src="plugins/chart.js/Chart.min.js"></script> -->
-<!-- Sparkline -->
-<!-- <script src="plugins/sparklines/sparkline.js"></script> -->
-<!-- JQVMap -->
-<!-- <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<script src="plugins/inputmask/jquery.inputmask.min.js"></script> -->
-
-<!-- jQuery Knob Chart -->
-<!-- <script src="plugins/jquery-knob/jquery.knob.min.js"></script> -->
-<!-- daterangepicker -->
-<!-- <!-- <script src="plugins/moment/moment.min.js"></script> -->
-<!-- <script src="plugins/daterangepicker/daterangepicker.js"></script> -->
-<!-- Tempusdominus Bootstrap 4 -->
-<!-- <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script> -->
-<!-- Summernote -->
-<!-- <script src="plugins/summernote/summernote-bs4.min.js"></script> -->
-<!-- overlayScrollbars -->
-<!-- <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
-<!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 
@@ -485,155 +670,136 @@
 <script src="dist/js/pages/dashboard.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script src="calendar.min.js"></script>
 <!-- <script src="calendar.js"></script> -->
-<script
-  src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
+<script src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
 <script type="text/javascript">
 
-document.querySelectorAll('input[type=number]')
-  .forEach(e => e.oninput = () => {
-    // Always 2 digits
-    if (e.value.length >= 2) e.value = e.value.slice(0, 2);
-    // 0 on the left (doesn't work on FF)
-    if (e.value.length === 1) e.value = '0' + e.value;
-    // Avoiding letters on FF
-    if (!e.value) e.value = '00';
+  document.querySelectorAll('input[type=number]')
+    .forEach(e => e.oninput = () => {
+      // Always 2 digits
+      if (e.value.length >= 2) e.value = e.value.slice(0, 2);
+      // 0 on the left (doesn't work on FF)
+      if (e.value.length === 1) e.value = '0' + e.value;
+      // Avoiding letters on FF
+      if (!e.value) e.value = '00';
+    });
+
+
+    var config = `
+  function selectDate(date) {
+  $('#calendar-wrapper').updateCalendarOptions({
+  date: date
   });
-
-
-  var config = `
-function selectDate(date) {
-$('#calendar-wrapper').updateCalendarOptions({
-date: date
-});
- 
-let currentDateTime = calendar.getSelectedDate();
-
-
-showCurrentDateTime(currentDateTime);
-
-}
-
-var defaultConfig = {
-weekDayLength: 1,
-date: new Date(),
-onClickDate: selectDate,
-showYearDropdown: true,
-startOnMonday: false,
-};
-
-var calendar = $('#calendar-wrapper').calendar(defaultConfig);
-
-`;
-
-Date.prototype.addDays = function(days) {
-    var date = new Date(this.valueOf());
-    date.setDate(date.getDate() + days);
-    return date;
-}
-
-// console.log(date.addDays(5));
-
-const showCurrentDateTime = function (currentDateTime){
-
-//   var curr = currentDateTime; // get current date
-//   var first = curr.getDate();// - curr.getDay(); // First day is the day of the month - the day of the week
-//   var month = curr.getMonth();
-//  alert(curr);
-
- var curr = currentDateTime; // get current date
-var first = curr.getDate() - curr.getDay()+1; // First day is the day of the month - the day of the week
-var last = first + 6; // last day is the first day + 6
-
-var lastday = new Date(curr.setDate(last)).toUTCString();
-var firstday = new Date(curr.setDate(first)).toUTCString();
-
-var d = new Date(curr.getYear(),curr.getMonth(),curr.getDate());
-console.log(curr);
-
-var dateString = curr.toString().substring(4,15);
-const dateArray = dateString.split(" ");
-console.log(dateArray);
-
-var newDate = new Date (dateArray[2],5,dateArray[1]);
-console.log(newDate);
-console.log("Added Days ",newDate.addDays(2));
-
-
-// if(curr.getDay()===0)
-// {   
-//   var firstday = new Date(curr.setDate(first+1));
-//   var secondDay = new Date(curr.setDate((first+2)));
-//   var thirdDay = new Date(curr.setDate(first+3));
-//   var fourthDay = new Date(curr.setDate(first+4));
-//   var fifthDay = new Date(curr.setDate(first+5));
-//   var sixthDay = new Date(curr.setDate(first+6));
-//   var lastDay = new Date(curr.setDate(first+7));
-//    $("#sun").text(firstday.toUTCString().substring(5,11));
-//     $("#mon").text(secondDay.toUTCString().substring(5,11));
-//     $("#tue").text(thirdDay.toUTCString().substring(5,11));
-//     $("#wed").text(fourthDay.toUTCString().substring(5,11));
-//     $("#thur").text(fifthDay.toUTCString().substring(5,11));
-//     $("#fri").text(sixthDay.toUTCString().substring(5,11));
-//     $("#sat").text(lastDay.toUTCString().substring(5,11));
-//    ;
-// }
-
-
-
- // console.log("Curr",curr, "Current Date",curr.getDate(),"Current Day",curr.getDay()) ;
- 
-  var last = first + 6; // last day is the first day + 6
-  const shortMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-  var firstday = new Date(curr.setDate(first)).toUTCString();
-  var lastday = new Date(curr.setDate(last)).toUTCString();
-  var second = first + 1;
-  var firstDay = new Date(curr.setDate(first)).toUTCString();
-  var secondDay = new Date(curr.setDate((second))).toUTCString();
-  var thirdDay = new Date(curr.setDate(first+2)).toUTCString();
-  var fourthDay = new Date(curr.setDate(first+3)).toUTCString();
-  var fifthDay = new Date(curr.setDate(first+4)).toUTCString();
-  var sixthDay = new Date(curr.setDate(first+5)).toUTCString();
-  var lastDay = new Date(curr.setDate(last)).toUTCString();
-
-  // console.log("Month",shortMonths[month]) 
-
-  // console.log(Date(curr.setDate(first)).toUTCString().substring(5,11));
- // console.log(firstday,secondDay,lastday);
-  // console.log(firstday.substring(5,11))
-
-  const num = [0,1,2,3,4,5,6];
-
-    $("#sun").text((firstDay.substring(5,11)));
-    $("#mon").text( (secondDay.substring(5,11)));
-    $("#tue").text( (thirdDay.substring(5,11)));
-    $("#wed").text( (fourthDay.substring(5,11)));
-    $("#thur").text( (fifthDay.substring(5,11)));
-    $("#fri").text( (sixthDay.substring(5,11)));
-    $("#sat").text( (lastDay.substring(5,11)));
-
-  // num.forEach(function(i,val){
-  //   var day = curr.getDay()+i;
-
-    
-
-  //   })
-}
   
+  let todayDate = calendar.getSelectedDate();
+  newcurrentDateTime(todayDate);
+
+  }
+
+  var defaultConfig = {
+  weekDayLength: 1,
+  date: new Date(),
+  onClickDate: selectDate,
+  showYearDropdown: true,
+  startOnMonday: false,
+  };
+
+  var calendar = $('#calendar-wrapper').calendar(defaultConfig);
+
+  `;
+
   const flask = new CodeFlask('#editor', { 
-    language: 'js', 
-    lineNumbers: true 
-  });
-  flask.updateCode(config);
-  flask.onUpdate((code) => {
-    try {
-      eval(code);
-    } catch(e) {}
-  });
+      language: 'js', 
+      lineNumbers: true 
+    });
+    flask.updateCode(config);
+    flask.onUpdate((code) => {
+      try {
+        eval(code);
+      } catch(e) {}
+    });
+
+    $( document ).ready(function() {
+
+    currentDateTime();
+
+ //console.log("Answer is ",getDatesInRange(d1, d2));
+
+});
+
+function currentDateTime() {
+ 
+ var curr = new Date; // get current date
+ var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
+ var last = first + 6; // last day is the first day + 6
+
+ var firstday = new Date(curr.setDate(first));
+ var lastday = new Date(curr.setDate(last));
+
+ console.log("Two days",firstday,lastday);
+
+ const d1 = firstday;
+ const d2 = lastday;
+
+ const dateArray = getDatesInRange(d1, d2);
+
+ console.log("Result :",dateArray[0].toString().substring(4,10));
+
+ $("#sun").text(dateArray[0].toString().substring(4,10));
+ $("#mon").text(dateArray[1].toString().substring(4,10));
+ $("#tue").text(dateArray[2].toString().substring(4,10));
+ $("#wed").text(dateArray[3].toString().substring(4,10));
+ $("#thur").text(dateArray[4].toString().substring(4,10));
+ $("#fri").text(dateArray[5].toString().substring(4,10));
+ $("#sat").text(dateArray[6].toString().substring(4,10));
+}
+
+function newcurrentDateTime(todayDate) {
+ 
+ console.log("Date!!",todayDate);
+ var curr = todayDate; // get current date
+ var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
+ var last = first + 6; // last day is the first day + 6
+
+ var firstday = new Date(curr.setDate(first));
+ var lastday = new Date(curr.setDate(last));
+
+ console.log("Two days",firstday,lastday);
+
+ const d1 = firstday;
+ const d2 = lastday;
+
+ const dateArray = getDatesInRange(d1, d2);
+
+ console.log("Result :",dateArray[0].toString().substring(4,10));
+
+ $("#sun").text(dateArray[0].toString().substring(4,10));
+ $("#mon").text(dateArray[1].toString().substring(4,10));
+ $("#tue").text(dateArray[2].toString().substring(4,10));
+ $("#wed").text(dateArray[3].toString().substring(4,10));
+ $("#thur").text(dateArray[4].toString().substring(4,10));
+ $("#fri").text(dateArray[5].toString().substring(4,10));
+ $("#sat").text(dateArray[6].toString().substring(4,10));
+}
+
+function getDatesInRange(startDate, endDate) {
+
+ // alert(endDate);
+ const date = new Date(startDate.getTime());
+ // alert(date);
+ const dates = [];
+
+ while (date <= endDate) {
+   dates.push(new Date(date));
+   date.setDate(date.getDate() + 1);
+ }
+ 
+ return dates;
+}
+   
 </script>
-<script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 
 </body>

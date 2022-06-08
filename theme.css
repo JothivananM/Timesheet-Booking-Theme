@@ -133,13 +133,13 @@
 
 .special-buttons {
   text-align: right;
-  border-top: 1px solid #eee;
+ margin-top: 8px;
 }
 
 .today-button {
   margin: 0 auto;
-  border: 2px solid rgb(153, 153, 207);
-  background-color: rgb(153, 153, 207);
+  border: 2px solid #1564c0;
+  background-color: #1564c0;
   border-radius: 5px;
   color: white;
   padding: 3px;
